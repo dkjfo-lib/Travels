@@ -2,12 +2,12 @@ const express = require("express");
 const { getTravelStories, createTravelStory } = require("../middleware/routes_helpers");
 const router = express.Router();
 
-// @desc    All travels display page
-// @route   GET /
+// @desc    All travel posts display page
+// @route   GET api/
 router.get("/", getTravelStories);
 
-// @desc    All travels display page
-// @route   GET /
+// @desc    Create new post
+// @route   POST api/
 router.post("/", createTravelStory);
 
 module.exports = router;

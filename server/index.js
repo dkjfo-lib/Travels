@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 app.use(cors());
 
-app.use("/", require("./routes/index_route"));
+app.use("/api", require("./routes/index_route"));
 
 mongoose
   .connect(process.env.MONGO_URI, {
